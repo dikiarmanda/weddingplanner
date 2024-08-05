@@ -13,7 +13,7 @@ return new class extends Migration {
     Schema::create('responsibles', function (Blueprint $table) {
       $table->id();
       $table->string('name')->unique();
-      $table->string('whatsapp');
+      $table->string('whatsapp')->default('-')->nullable();
       $table->timestamps();
     });
   }
