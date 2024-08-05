@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('address');
             $table->string('description');
             $table->string('whatsapp');
-            $table->integer('invitation_id');
-            $table->integer('responsible_id');
+            $table->foreignId('invitation_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('responsible_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
